@@ -6,7 +6,7 @@ const fs = require('fs')
 module.exports = async function csvTemplate(params) {
   try {
     let template = await readCSV(params.template)
-    let result = await render(template, params.data)
+    let result = await render(unescapeQuotes(template), params.data)
     await writeCSV(params.output, result)
     return true
   } catch (err) {
@@ -24,5 +24,10 @@ let writeCSV = async function(path, data) {
 }
 
 let render = async function(template, data) {
+  console.log(template)
   return ejs.render(template, data)
+}
+
+let unescapeQuotes =  function(data) {
+  return data.replace(/(\'|\")+\</g, '<').replace(/\>(\'|\")+/g, '>').replace(/(\'\')/g, '\'').replace(/(\"\")/g, '\"')
 }

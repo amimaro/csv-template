@@ -46,4 +46,4 @@ MIT [LICENSE.md](LICENSE.md)
 4. Push to the branch (`git push origin new-feature`)
 5. Create new Pull Request
 
-Crafted with <3 by amimaro ([@](https://github.com/amimaro)).
+Crafted with <3 by [amimaro](https://github.com/amimaro).

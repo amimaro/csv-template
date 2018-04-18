@@ -11,25 +11,39 @@ npm install --save csv-template
 ## Usage
 
 ```javascript
-var csvTemplate = require('csv-template')
+const csvTemplate = require('csv-template')
 
-csvTemplate()  // => true
+csvTemplate({
+  template: './example.csv',
+  output: './output.csv',
+  data: {
+    name: 'John Doe',
+    age: 26,
+    email: 'johndoe@example.com',
+    birthdate: '01/01/1990',
+    projects: ['project1', 'project2', 'project3']
+  }
+}).then((res) => {
+  console.log(res)
+})
+```
+
+## Testing
+
+```bash
+npm run test
 ```
 
 ## License
 
-MIT
+MIT [LICENSE.md](LICENSE.md)
 
 ## Contributing
 
 1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
+2. Create your feature branch (`git checkout -b new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
+4. Push to the branch (`git push origin new-feature`)
 5. Create new Pull Request
 
-Crafted with <3 by amimaro ([@](https://twitter.com/)).
-
-***
-
-> This package was initially generated with [yeoman](http://yeoman.io) and the [p generator](https://github.com/johnotander/generator-p.git).
+Crafted with <3 by amimaro ([@](https://github.com/amimaro)).

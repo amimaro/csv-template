@@ -13,7 +13,9 @@
   "repository": "amimaro/csv-template",
   "keywords": [],
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "ejs": "^2.5.8"
+  },
   "devDependencies": {
     "ava": "*"
   }

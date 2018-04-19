@@ -24,7 +24,6 @@ let writeCSV = async function(path, data) {
 }
 
 let render = async function(template, data) {
-  console.log(template)
   return ejs.render(template, data)
 }
 

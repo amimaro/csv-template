@@ -1,6 +1,6 @@
 # csv-template [![Build Status](https://secure.travis-ci.org/amimaro/csv-template.svg?branch=master)](https://travis-ci.org/amimaro/csv-template) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
-CSV templating with EJS
+CSV templating with mustache.js
 
 ## Installation
 

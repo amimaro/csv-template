@@ -1,6 +1,6 @@
 {
   "name": "csv-template",
-  "description": "CSV templating with EJS",
+  "description": "CSV templating with mustache.js",
   "author": "amimaro",
   "version": "0.1.2",
   "main": "index.js",
@@ -14,7 +14,7 @@
   "keywords": [],
   "license": "MIT",
   "dependencies": {
-    "ejs": "^2.5.8"
+    "mustache": "^2.3.0"
   },
   "devDependencies": {
     "ava": "*"

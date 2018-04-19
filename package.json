@@ -2,7 +2,7 @@
   "name": "csv-template",
   "description": "CSV templating with mustache.js",
   "author": "amimaro",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "main": "index.js",
   "files": [
     "index.js"

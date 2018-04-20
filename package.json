@@ -11,7 +11,7 @@
     "test": "ava"
   },
   "repository": "amimaro/csv-template",
-  "keywords": [],
+  "keywords": ["csv","template","mustache","file"],
   "license": "MIT",
   "dependencies": {
     "mustache": "^2.3.0"

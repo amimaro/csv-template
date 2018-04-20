@@ -8,10 +8,9 @@ module.exports = async function csvTemplate(params) {
     let template = await readCSV(params.template)
     let result = await render(unescapeQuotes(template), params.data)
     await writeCSV(params.output, result)
-    return true
+    return result
   } catch (err) {
-    console.error(`An error occured: ${err}`)
-    return false
+    throw err
   }
 }
 

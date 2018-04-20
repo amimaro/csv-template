@@ -4,8 +4,8 @@ import csvTemplate from './'
 test('csv-template example', t => {
   t.plan(1)
   return csvTemplate({
-    template: './example.csv',
-    output: './output.csv',
+    template: 'example.csv',
+    output: 'output.csv',
     data: {
       name: 'John Doe',
       age: 26,
@@ -14,15 +14,17 @@ test('csv-template example', t => {
       projects: ['project1', 'project2', 'project3']
     }
   }).then((res) => {
-    t.true(res)
+    t.pass()
+  }).catch((err) => {
+    t.fail()
   })
 })
 
 test('csv-template fail example', t => {
   t.plan(1)
   return csvTemplate({
-    template: './exampleFail.csv',
-    output: './output.csv',
+    template: 'exampleFail.csv',
+    output: 'output.csv',
     data: {
       name: 'John Doe',
       age: 26,
@@ -31,6 +33,8 @@ test('csv-template fail example', t => {
       projects: ['project1', 'project2', 'project3']
     }
   }).then((res) => {
-    t.false(res)
+    t.fail()
+  }).catch((err) => {
+    t.pass()
   })
 })
